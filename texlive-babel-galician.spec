@@ -5,8 +5,8 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-babel-galician
-Version:	20131013
-Release:	9
+Version:	4.3c
+Release:	1
 Summary:	TeXLive babel-galician package
 Group:		Publishing
 URL:		http://tug.org/texlive
