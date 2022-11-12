@@ -1,19 +1,13 @@
-# revision 30270
-# category Package
-# catalog-ctan undef
-# catalog-date undef
-# catalog-license undef
-# catalog-version undef
 Name:		texlive-babel-galician
-Version:	4.3c
-Release:	2
+Version:	30270
+Release:	1
 Summary:	TeXLive babel-galician package
 Group:		Publishing
 URL:		http://tug.org/texlive
 License:	http://www.tug.org/texlive/LICENSE.TL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-galician.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-galician.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-galician.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-galician.r30270.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-galician.doc.r30270.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-galician.source.r30270.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -23,12 +17,12 @@ Requires(post):	texlive-kpathsea
 TeXLive babel-galician package.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -42,7 +36,8 @@ TeXLive babel-galician package.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
