@@ -1,6 +1,6 @@
 Name:		texlive-babel-galician
 Version:	30270
-Release:	1
+Release:	2
 Summary:	TeXLive babel-galician package
 Group:		Publishing
 URL:		http://tug.org/texlive
